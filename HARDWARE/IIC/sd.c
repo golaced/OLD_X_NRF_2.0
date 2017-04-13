@@ -360,19 +360,36 @@ switch (state)
 //		ch[cnt_++]=fly_controller.now.alt_fushion_sonar;
 //		sd_write(ch,"bai.txt", index, t_now,cnt_,7);cnt_=0;
 // HML YAW_CAL
-	  ch[cnt_++]=fly_controller.imu.roll;
-		ch[cnt_++]=fly_controller.imu.pitch;
-		ch[cnt_++]=fly_controller.imu.yaw;
+//	ch[cnt_++]=fly_controller.imu.roll;
+//	ch[cnt_++]=fly_controller.imu.pitch;
+//	ch[cnt_++]=fly_controller.imu.yaw;
+//	
+//	ch[cnt_++]=fly_controller.sensor.hmx_c;
+//	ch[cnt_++]=fly_controller.sensor.hmy_c;
+//	ch[cnt_++]=fly_controller.sensor.hmz_c;
+//	ch[cnt_++]=fly_controller.imu.acc_x;
+//	ch[cnt_++]=fly_controller.imu.acc_y;
+//	ch[cnt_++]=fly_controller.imu.acc_z;
+//	sd_write(ch,"hml_yaw.txt", index, t_now,cnt_,2);cnt_=0;
 		
-		ch[cnt_++]=fly_controller.sensor.hmx_c;
-		ch[cnt_++]=fly_controller.sensor.hmy_c;
-		ch[cnt_++]=fly_controller.sensor.hmz_c;
-		ch[cnt_++]=fly_controller.imu.acc_x;
-		ch[cnt_++]=fly_controller.imu.acc_y;
-		ch[cnt_++]=fly_controller.imu.acc_z;
-		sd_write(ch,"hml_yaw.txt", index, t_now,cnt_,2);cnt_=0;
-		
-		
+//QR
+	  ch[cnt_++]=mark[0][0];
+		ch[cnt_++]=mark[0][1];
+		ch[cnt_++]=mark[0][2];
+		ch[cnt_++]=mark[0][3];
+		ch[cnt_++]=mark[1][0];
+		ch[cnt_++]=mark[1][1];
+		ch[cnt_++]=mark[1][2];
+		ch[cnt_++]=mark[1][3];
+		ch[cnt_++]=mark[2][0];
+		ch[cnt_++]=mark[2][1];
+		ch[cnt_++]=mark[2][2];
+		ch[cnt_++]=mark[2][3];
+		ch[cnt_++]=mark[3][0];
+		ch[cnt_++]=mark[3][1];
+		ch[cnt_++]=mark[3][2];
+		ch[cnt_++]=mark[3][3];
+		sd_write(ch,"mark.txt", index, t_now,cnt_,2);cnt_=0;
 //		ch[cnt_++]=qr_matlab_data[0];
 //		ch[cnt_++]=qr_matlab_data[1];
 //		ch[cnt_++]=qr_matlab_data[2];

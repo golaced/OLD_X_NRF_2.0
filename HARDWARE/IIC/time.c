@@ -154,7 +154,7 @@ void TIM3_Cap_Init(u16 arr,u16 psc)
 
  
   NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;
-	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=1;//抢占优先级3
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority=0;//抢占优先级3
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority =0;		//子优先级3
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;			//IRQ通道使能
 	NVIC_Init(&NVIC_InitStructure);	//根据指定的参数初始化VIC寄存器、
@@ -162,6 +162,7 @@ void TIM3_Cap_Init(u16 arr,u16 psc)
 
 
 }
+
 u32 temp=0;
 u8  TIM5CH1_CAPTURE_STA=0,ppm_rx_sta=0,ppm_rx_num=0;	//输入捕获状态		    				
 u16	TIM5CH1_CAPTURE_VAL;	//输入捕获值
@@ -206,8 +207,12 @@ void TIM3_IRQHandler(void)
 		if(TIM5CH1_CAPTURE_STA&0X80)//成功捕获到了一次上升沿
 		{
 		
-			if(ppm_rx_sta==1) {Rc_Get_PPM.update=1;Rc_Get_PPM.lose_cnt=0;
-			ppm_rx[ppm_rx_num+1]=TIM5CH1_CAPTURE_VAL+400;ppm_rx_num++;
+			if(ppm_rx_sta==1) {
+				if((ppm_rx[3]>1019+2||ppm_rx[3]<1019-2)&&ppm_rx[3]>1000){
+				Rc_Get_PPM.update=1;Rc_Get_PPM.lose_cnt=0;
+				}
+				if(TIM5CH1_CAPTURE_VAL+400>0&&TIM5CH1_CAPTURE_VAL+400<2000){
+			ppm_rx[ppm_rx_num+1]=TIM5CH1_CAPTURE_VAL+400;ppm_rx_num++;}
 			}//printf("TIM5CH1_CAPTURE_VAL:%d\r\n",TIM5CH1_CAPTURE_VAL);
 			if(4>TIM5CH1_CAPTURE_STA&0X3F>0||TIM5CH1_CAPTURE_VAL>3000) ppm_rx_sta++;//低电平时间大于3000us为起始帧
 			if(ppm_rx_sta==2) {ppm_rx_sta=0;ppm_rx[0]=1;ppm_rx_num=0;}//printf("receive\r\n");//ppm_rx_sta   1 表示接收到同步帧/ 2接收到到下一起始帧 ppm数据接收完毕

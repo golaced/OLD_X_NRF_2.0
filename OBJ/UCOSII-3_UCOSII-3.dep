@@ -1,6 +1,6 @@
 Dependencies for Project 'UCOSII-3', Target 'UCOSII-3': (DO NOT MODIFY !)
 F (..\HARDWARE\IIC\datasheet.txt)(0x56D452D1)()
-F (..\HARDWARE\IIC\ucos_task.c)(0x58BC20DC)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ucos_task.o --omf_browse ..\obj\ucos_task.crf --depend ..\obj\ucos_task.d)
+F (..\HARDWARE\IIC\ucos_task.c)(0x58EEF93A)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\ucos_task.o --omf_browse ..\obj\ucos_task.crf --depend ..\obj\ucos_task.d)
 I (..\HARDWARE\IIC\include.h)(0x58BC11E0)
 I (e:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (e:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
@@ -47,8 +47,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -90,7 +90,7 @@ I (..\HARDWARE\IIC\gps.h)(0x57E34C2A)
 I (..\HARDWARE\IIC\eso.h)(0x573EC761)
 I (..\HARDWARE\IIC\sd.h)(0x58BC11E0)
 I (..\HARDWARE\IIC\filter.h)(0x56AB30A6)
-F (.\main.c)(0x58BC13F9)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x58EEDEB3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\HARDWARE\IIC\include.h)(0x58BC11E0)
 I (e:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (e:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
@@ -137,8 +137,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1284,8 +1284,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1308,7 +1308,7 @@ I (..\HARDWARE\FATFS\exfuns\exfuns.h)(0x54002836)
 I (..\HARDWARE\IIC\hml5833l.h)(0x56AB379A)
 I (e:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
 I (..\HARDWARE\IIC\pwm_in.h)(0x56D8F3E7)
-F (..\HARDWARE\IIC\led_fc.c)(0x58BC20DC)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\led_fc.o --omf_browse ..\obj\led_fc.crf --depend ..\obj\led_fc.d)
+F (..\HARDWARE\IIC\led_fc.c)(0x58C2AD24)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\led_fc.o --omf_browse ..\obj\led_fc.crf --depend ..\obj\led_fc.d)
 I (..\HARDWARE\IIC\led_fc.h)(0x58BA9181)
 I (..\USER\stm32f4xx.h)(0x542BA484)
 I (..\CORE\core_cm4.h)(0x53C7D532)
@@ -1356,8 +1356,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1429,8 +1429,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1452,7 +1452,7 @@ I (..\HARDWARE\FATFS\src\ffconf.h)(0x53C89DEF)
 I (..\HARDWARE\FATFS\exfuns\exfuns.h)(0x54002836)
 I (..\HARDWARE\IIC\hml5833l.h)(0x56AB379A)
 I (e:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x56FE42DC)
-F (..\HARDWARE\IIC\spi_nrf.c)(0x56AB3916)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\spi_nrf.o --omf_browse ..\obj\spi_nrf.crf --depend ..\obj\spi_nrf.d)
+F (..\HARDWARE\IIC\spi_nrf.c)(0x58EEDEB3)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\spi_nrf.o --omf_browse ..\obj\spi_nrf.crf --depend ..\obj\spi_nrf.d)
 I (..\HARDWARE\IIC\include.h)(0x58BC11E0)
 I (e:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (e:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
@@ -1499,8 +1499,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1520,7 +1520,7 @@ I (..\HARDWARE\FATFS\src\ff.h)(0x55C0C1CE)
 I (..\HARDWARE\FATFS\src\integer.h)(0x5378E62C)
 I (..\HARDWARE\FATFS\src\ffconf.h)(0x53C89DEF)
 I (..\HARDWARE\FATFS\exfuns\exfuns.h)(0x54002836)
-F (..\HARDWARE\IIC\time.c)(0x58BC1327)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\time.o --omf_browse ..\obj\time.crf --depend ..\obj\time.d)
+F (..\HARDWARE\IIC\time.c)(0x58CDEC2C)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\time.o --omf_browse ..\obj\time.crf --depend ..\obj\time.d)
 I (..\HARDWARE\IIC\time.h)(0x58BBE3B9)
 I (..\USER\stm32f4xx.h)(0x542BA484)
 I (..\CORE\core_cm4.h)(0x53C7D532)
@@ -1567,8 +1567,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1675,8 +1675,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1744,8 +1744,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1821,8 +1821,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1842,7 +1842,7 @@ I (..\HARDWARE\FATFS\src\ff.h)(0x55C0C1CE)
 I (..\HARDWARE\FATFS\src\integer.h)(0x5378E62C)
 I (..\HARDWARE\FATFS\src\ffconf.h)(0x53C89DEF)
 I (..\HARDWARE\FATFS\exfuns\exfuns.h)(0x54002836)
-F (..\HARDWARE\IIC\usart_fc.c)(0x58BBA71E)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\usart_fc.o --omf_browse ..\obj\usart_fc.crf --depend ..\obj\usart_fc.d)
+F (..\HARDWARE\IIC\usart_fc.c)(0x58EEFAD7)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\usart_fc.o --omf_browse ..\obj\usart_fc.crf --depend ..\obj\usart_fc.d)
 I (..\HARDWARE\IIC\include.h)(0x58BC11E0)
 I (e:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (e:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
@@ -1889,8 +1889,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -1970,8 +1970,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -2046,8 +2046,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\rc.h)(0x56C16618)
@@ -2120,8 +2120,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -2193,8 +2193,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -2267,8 +2267,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -2337,8 +2337,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -2530,8 +2530,8 @@ I (..\HARDWARE\IIC\mpu6050.h)(0x56AB4236)
 I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)
@@ -2550,7 +2550,7 @@ I (..\HARDWARE\FATFS\src\ff.h)(0x55C0C1CE)
 I (..\HARDWARE\FATFS\src\integer.h)(0x5378E62C)
 I (..\HARDWARE\FATFS\src\ffconf.h)(0x53C89DEF)
 I (..\HARDWARE\FATFS\exfuns\exfuns.h)(0x54002836)
-F (..\HARDWARE\IIC\sd.c)(0x58BC1989)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\sd.o --omf_browse ..\obj\sd.crf --depend ..\obj\sd.d)
+F (..\HARDWARE\IIC\sd.c)(0x58CDE3BE)(--c99 -c --cpu Cortex-M4.fp -g -W -O0 --apcs=interwork -I ..\CORE -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\USER -I ..\HARDWARE\LED -I ..\HARDWARE\LCD -I ..\HARDWARE\KEY -I ..\HARDWARE\IIC -I ..\HARDWARE\24CXX -I ..\FWLIB\inc -I ..\HARDWARE\TOUCH -I ..\HARDWARE\BEEP -I ..\UCOSII\CONFIG -I ..\UCOSII\CORE -I ..\UCOSII\PORT -I ..\HARDWARE\TPAD -I ..\MALLOC -I ..\HARDWARE\FWLIB\inc -I ..\HARDWARE\FATFS\exfuns -I ..\HARDWARE\FATFS\src-I "F:\Quarotor\FC_MIN_飞控研究\UCOS - mini\OLD_X2.0\OLD_X_NRF\USER\RTE"-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-I e:\Keil_v5\ARM\CMSIS\Include-I e:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.9.0\Device\Include-D__UVISION_VERSION="520" -DSTM32F407xx -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o ..\obj\sd.o --omf_browse ..\obj\sd.crf --depend ..\obj\sd.d)
 I (..\HARDWARE\IIC\include.h)(0x58BC11E0)
 I (e:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (e:\Keil_v5\ARM\ARMCC\include\string.h)(0x56FE42DE)
@@ -2597,8 +2597,8 @@ I (..\HARDWARE\IIC\parameter.h)(0x56AB3086)
 I (..\SYSTEM\delay\delay.h)(0x53B7797E)
 I (..\SYSTEM\sys\sys.h)(0x543CFEBC)
 I (..\HARDWARE\FATFS\src\malloc.h)(0x58BC137A)
-I (..\HARDWARE\IIC\usart_fc.h)(0x58BAC7BD)
-I (..\HARDWARE\IIC\spi_nrf.h)(0x56AB3930)
+I (..\HARDWARE\IIC\usart_fc.h)(0x58EEF793)
+I (..\HARDWARE\IIC\spi_nrf.h)(0x58EEDEC7)
 I (..\HARDWARE\IIC\rc_mine.h)(0x58B9743E)
 I (..\HARDWARE\IIC\nrf.h)(0x56AB394A)
 I (..\HARDWARE\IIC\ultrasonic.h)(0x56C087CA)

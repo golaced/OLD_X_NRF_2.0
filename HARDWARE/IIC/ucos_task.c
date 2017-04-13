@@ -541,6 +541,7 @@ float wz_speed_flow[2];
 float w_acc_spd=0.915;
 float w_acc_fix=0.1;
 float sd_time;
+u16 sd_dt=100;
 void flow_task(void *pdata)
 {static u8 state,sd_insert_reg,cnt;
  static float hc_speed_i[2],h_speed[2],wz_speed_0[2],tempacc_lpf[2];				
@@ -584,7 +585,7 @@ void flow_task(void *pdata)
 	sd.task_detal = Get_Cycle_T(GET_T_SD);		
 	SD_Save_Task(sd.task_detal);	
 	//}
-	delay_ms(80);
+	delay_ms(sd_dt);
 	}
 }	
 	
@@ -645,23 +646,45 @@ OS_STK  UART_TASK_STK[UART_STK_SIZE];
 u8 UART_UP_LOAD_SEL=4;//<------------------------------UART UPLOAD DATA SEL
 u8 state_v_test=0;
 u8 num_need_to_check;
+#define PWM_PPM_MIN 1237
+#define PWM_PPM_MAX 1804
+#define PWM_PPM_MID 1517
+
+#define SBUS_MIN 954
+#define SBUS_MAX 2108
+#define SBUS_MID 1524
+
 void uart_task(void *pdata)
 {	static u8 cnt[4],state,sd_save_reg;	
   static u8 sd_sel;	
  	while(1)
 	{		
-    if(sd_save_reg==0&&sd.en_save==1)
-    delay_ms(2500);
-    else{		
-		Rc_Get_PPM.PITCH=		Moving_Median(11,5,ppm_rx[1]);
-		Rc_Get_PPM.ROLL=		Moving_Median(12,5,ppm_rx[2]);
-		Rc_Get_PPM.THROTTLE=Moving_Median(13,5,ppm_rx[3]);
-		Rc_Get_PPM.YAW=			Moving_Median(14,5,ppm_rx[4]);
-		Rc_Get_PPM.AUX1=		Moving_Median(15,5,ppm_rx[5]);
-		Rc_Get_PPM.AUX2=		Moving_Median(16,5,ppm_rx[6]);
-		Rc_Get_PPM.AUX3=		Moving_Median(17,5,ppm_rx[7]);
-		Rc_Get_PPM.AUX4=		Moving_Median(18,5,ppm_rx[8]);
-		Rc_Get_PPM.AUX5=		Moving_Median(19,5,ppm_rx[9]);
+		
+		Rc_Get_SBUS.ROLL=		 (Moving_Median(20,10,channels[0])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.PITCH=	 (Moving_Median(21,10,channels[1])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.THROTTLE=(Moving_Median(22,10,channels[2])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.YAW=		 (Moving_Median(23,10,channels[3])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.AUX1=		 (Moving_Median(24,10,channels[4])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.AUX2=		 (Moving_Median(25,10,channels[5])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.AUX3=		 (Moving_Median(26,10,channels[6])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.AUX4=		 (Moving_Median(27,10,channels[7])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+		Rc_Get_SBUS.AUX5=		 (Moving_Median(28,10,channels[8])-SBUS_MID)*500/((SBUS_MAX-SBUS_MIN)/2)+1500;
+    if(sd.en_save==0){
+//    delay_ms(2500);
+//    else{		
+		Rc_Get_PPM.ROLL=		(Moving_Median(11,10,ppm_rx[1])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.PITCH=		(Moving_Median(12,10,ppm_rx[2])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.THROTTLE=(Moving_Median(13,10,ppm_rx[3])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.YAW=			(Moving_Median(14,10,ppm_rx[4])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.AUX1=		(Moving_Median(15,10,ppm_rx[5])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.AUX2=		(Moving_Median(16,10,ppm_rx[6])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.AUX3=		(Moving_Median(17,10,ppm_rx[7])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.AUX4=		(Moving_Median(18,10,ppm_rx[8])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		Rc_Get_PPM.AUX5=		(Moving_Median(19,10,ppm_rx[9])-PWM_PPM_MID)*500/((PWM_PPM_MAX-PWM_PPM_MIN)/2)+1500;
+		}
+	  else
+		{
+		Rc_Get_PPM.THROTTLE=620;
 		}
 		sd_save_reg=sd.en_save;
 		delay_ms(10);  
@@ -754,7 +777,7 @@ static u8 cnt;
 		Rc_Get_PPM.update=0;
 	
 	 if(Rc_Get_SBUS.lose_cnt++>4/0.05)
-		Rc_Get_SBUS.update=0;
+		Rc_Get_SBUS.connect=0;
 	 
 	 	if(Rc_Get.lose_cnt++>4/0.05)
 		Rc_Get.update=0;

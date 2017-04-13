@@ -20,7 +20,7 @@ void Spi1_Init(void)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;//上拉
   GPIO_Init(GPIOB, &GPIO_InitStructure);//初始化
 	/*??SPI_NRF_SPI?CE??,?SPI_NRF_SPI? CSN ??:*/   //ce pc4
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10; //ce
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8; //ce
 	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_25MHz; 
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;//普通输出模式
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;//推挽输出
@@ -32,7 +32,7 @@ void Spi1_Init(void)
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;//推挽输出
 	GPIO_Init(GPIOB, &GPIO_InitStructure);	
 	/*??SPI_NRF_SPI?IRQ??,*/  //pc5
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_11; 
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9; 
 		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_25MHz; 
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;//普通输出模式
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;//上拉

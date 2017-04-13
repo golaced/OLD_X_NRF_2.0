@@ -215,9 +215,9 @@ switch(idle_state)
 		if(Rc_Get_PPM.update&&Rc_Get.update)
 				LEDRGB_COLOR(WHITE); 
 		 else if(Rc_Get.update)
-				LEDRGB_COLOR(BLUE); 
-		 else if(Rc_Get_PPM.update)
 				LEDRGB_COLOR(GREEN); 
+		 else if(Rc_Get_PPM.update)
+				LEDRGB_COLOR(BLUE); 
 		 else
 				LEDRGB_COLOR(RED);
 	if(cnt_idle++>0.1/0.05)

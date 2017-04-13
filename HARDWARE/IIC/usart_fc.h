@@ -28,6 +28,7 @@ typedef struct int16_rcget{
 				int16_t AUX4;
 				int16_t AUX5;
 	      u8 update;
+	      u8 connect;
 	      u16 lose_cnt;
 				u8 RST;}RC_GETDATA;
 
@@ -452,5 +453,11 @@ extern struct _FLY fly_controller;
 #define SEND_NRF_PID 3						
 void data_per_uart1_dma(u8 sel);
 void clear_nrf_uart(void);
-extern u16 nrf_uart_cnt;						
+extern u16 nrf_uart_cnt;					
+extern float mark[10][4];						
+
+#define SBUS_SIGNAL_OK          0x00
+#define SBUS_SIGNAL_LOST        0x01
+#define SBUS_SIGNAL_FAILSAFE    0x03
+extern int16_t channels[18] ;
 #endif

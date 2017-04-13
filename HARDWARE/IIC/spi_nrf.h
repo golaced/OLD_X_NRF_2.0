@@ -2,8 +2,8 @@
 #define __SPI_H
 #include "include.h"
 
-#define SPI_CE_H()   GPIO_SetBits(GPIOB, GPIO_Pin_10) 
-#define SPI_CE_L()   GPIO_ResetBits(GPIOB, GPIO_Pin_10)
+#define SPI_CE_H()   GPIO_SetBits(GPIOB, GPIO_Pin_8) 
+#define SPI_CE_L()   GPIO_ResetBits(GPIOB, GPIO_Pin_8)
 
 #define SPI_CSN_H()  GPIO_SetBits(GPIOB, GPIO_Pin_12)
 #define SPI_CSN_L()  GPIO_ResetBits(GPIOB, GPIO_Pin_12)

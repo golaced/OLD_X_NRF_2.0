@@ -37,7 +37,8 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_GROUP);//设置系统中断优先级分组2
 	delay_init(168);  //初始化延时函数
 	TIM3_Cap_Init(0XFFFF,168/2-1);	//PPM
-  Usart3_Init(100000);//-------SBUS
+	Delay_ms(100);
+ 
   //-------------------------Para Init------------------------------------	
 	Para_Init();							//参数初始化
 	if(en_read)
@@ -59,7 +60,7 @@ int main(void)
 				}
 	}
 //------------------------Uart Init-------------------------------------
-  Usart1_Init(256000L);			//NRF M100
+  Usart1_Init(576000L);			//NRF M100
 	#if EN_DMA_UART1 
 	MYDMA_Config(DMA2_Stream7,DMA_Channel_4,(u32)&USART1->DR,(u32)SendBuff1,SEND_BUF_SIZE1+2,1);//DMA2,STEAM7,CH4,外设为串口1,存储器为SendBuff,长度为:SEND_BUF_SIZE.
 	#endif
@@ -67,9 +68,11 @@ int main(void)
 	#if EN_DMA_UART2
 	MYDMA_Config(DMA1_Stream6,DMA_Channel_4,(u32)&USART2->DR,(u32)SendBuff4,SEND_BUF_SIZE4+2,1);//DMA2,STEAM7,CH4,外设为串口1,存储器为SendBuff,长度为:SEND_BUF_SIZE.
 	#endif
+	Delay_ms(100);
 	Spi1_Init();		
 	Nrf24l01_Init(MODEL_RX2,40);//射频频道初始化
   Nrf24l01_Check();
+	Usart3_Init(100000);//-------SBUS
 //-----------------------Mode &  Flag init--------------------	
 //system
 #define AUX_SEL 1
